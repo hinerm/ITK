@@ -36,7 +36,7 @@ else ()
     find_path(_OPENCL_CPP_INCLUDE_DIRS CL/cl.hpp )
 
     if( ${OPENCL_INCLUDE_DIRS} STREQUAL "OPENCL_INCLUDE_DIRS-NOTFOUND" )
-     set( SEARCH_PATH ${OPENCL_ROOT_DIR}/inc ${OPENCL_ROOT_DIR}/common/inc ${PATH} "C:/ProgramData/NVIDIA Corporation/NVIDIA GPU Computing SDK/OpenCL/common/inc" "$ENV{ATISTREAMSDKROOT}/include" "C:/Program Files (x86)/AMD APP/include")
+     set( SEARCH_PATH ${OPENCL_ROOT_DIR}/include ${OPENCL_ROOT_DIR}/inc ${OPENCL_ROOT_DIR}/common/inc ${PATH} "C:/ProgramData/NVIDIA Corporation/NVIDIA GPU Computing SDK/OpenCL/common/inc" "$ENV{ATISTREAMSDKROOT}/include" "C:/Program Files (x86)/AMD APP/include")
      find_path(OPENCL_INCLUDE_DIRS CL/cl.h PATHS ${SEARCH_PATH} )
      find_path(_OPENCL_CPP_INCLUDE_DIRS CL/cl.hpp PATHS ${SEARCH_PATH} )
     endif()
